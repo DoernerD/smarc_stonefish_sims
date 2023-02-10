@@ -4,7 +4,8 @@ NUM_ROBOTS=1
 # the scenario and environment that will be loaded in the simulation
 # it includes the world map, auvs, where the auvs are etc.
 # SCENARIO="sam_biograd_hd"
-SCENARIO="algae_world_small"
+SCENARIO="visual_docking"
+#SCENARIO="algae_world_small"
 
 MIN_ALTITUDE=5
 MAX_DEPTH=20
@@ -61,6 +62,13 @@ case "$SCENARIO" in
 		LATITUDE=58.250833
 		LONGITUDE=11.450283
 		;;
+	"visual_docking")
+		# Algae farm
+		UTM_ZONE=32
+		UTM_BAND=V
+		LATITUDE=58.250833
+		LONGITUDE=11.450283
+		;;
 	*)
 		echo "UNKNOWN SCENARIO!"
 		exit 1
@@ -87,7 +95,8 @@ SMARC_STONEFISH_WORLDS_PATH="$(rospack find smarc_stonefish_worlds)"
 #CONFIG_FILE="${SAM_STONEFISH_SIM_PATH}/config/${SCENARIO}.yaml"
 WORLD_CONFIG="${SCENARIO}.yaml"
 WORLD_CONFIG_FILE="${SMARC_STONEFISH_WORLDS_PATH}/config/${WORLD_CONFIG}"
-ROBOT_CONFIG="sam_no_payload_sensors.yaml"
+#ROBOT_CONFIG="sam_no_payload_sensors.yaml"
+ROBOT_CONFIG="sam.yaml"
 ROBOT_CONFIG_FILE="${SIM_PKG_PATH}/config/${ROBOT_CONFIG}"
 SCENARIO_DESC="${SMARC_STONEFISH_WORLDS_PATH}/data/scenarios/default.scn"
 

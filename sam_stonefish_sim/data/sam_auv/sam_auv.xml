@@ -28,7 +28,7 @@
     </base_link>
 
     <link name="Batteries" type="box" physics="submerged" buoyant="false">
-        <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
+        <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 -1.0"/>
         <dimensions xyz="0.2 0.08 0.08"/>
         <material name="Neutral"/>
         <look name="manipulator"/>
